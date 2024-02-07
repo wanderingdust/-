@@ -1,4 +1,4 @@
-package com.bishe.kaoyan.dto;
+package com.bishe.kaoyan.pojo.dto;
 
 public class LoginDto {
     private String user_phone;
