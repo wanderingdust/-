@@ -34,7 +34,6 @@
       <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/profile.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/publish.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/question.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kaoyan" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kaoyan/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/pom.xml" afterDir="false" />
@@ -141,7 +140,7 @@
           <entry key="iml" value="2" />
           <entry key="java" value="531" />
           <entry key="js" value="2" />
-          <entry key="md" value="2" />
+          <entry key="md" value="3" />
           <entry key="properties" value="21" />
           <entry key="sql" value="1" />
           <entry key="user" value="1" />
@@ -157,7 +156,7 @@
           <entry key="IDEA_MODULE" value="2" />
           <entry key="JAVA" value="531" />
           <entry key="JavaScript" value="2" />
-          <entry key="Markdown" value="2" />
+          <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="4" />
           <entry key="Properties" value="21" />
           <entry key="Scratch" value="1" />
@@ -203,8 +202,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/kaoyan/src/main/resources/static/js/community.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+            <state relative-caret-position="147">
+              <caret line="21" column="71" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -336,8 +335,9 @@
     <option name="delegateBuildToMaven" value="true" />
     <option name="jreName" value="#JAVA_HOME" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="582" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="362" />
+    <option name="y" value="3" />
     <option name="width" value="1268" />
     <option name="height" value="1028" />
   </component>
@@ -437,7 +437,7 @@
     <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/templates/index.html&#10;commu&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/static/css/community.css&#10;Comment&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/java/com/bishe/kaoyan/utils/CommentTypeEnum.java&#10;CustomE&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/java/com/bishe/kaoyan/exception/implement/CustomizeErrorCode.java&#10;ICu&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/java/com/bishe/kaoyan/exception/ICustomizeErrorCode.java&#10;comment&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/Comment.java&#10;BasicErrorController&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController&#10;basic&#9;FILE&#9;jar://D:/maven/maven-repository/org/springframework/boot/spring-boot-autoconfigure/2.1.4.RELEASE/spring-boot-autoconfigure-2.1.4.RELEASE.jar!/org/springframework/boot/autoconfigure/web/servlet/error/BasicErrorController.class&#10;BasicErrorC&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController&#10;DefaultErrorAttribute&#9;PSI&#9;JAVA://org.springframework.boot.web.servlet.error.DefaultErrorAttributes&#10;comm&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/static/css/community.css&#10;publi&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/templates/publish.html&#10;q&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/templates/question.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1711030913209" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1711032381842" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javaweb/Suiyu" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -572,7 +572,7 @@
       <workItem from="1710465351455" duration="27467000" />
       <workItem from="1710854334583" duration="3328000" />
       <workItem from="1710923055309" duration="4388000" />
-      <workItem from="1710989601064" duration="14080000" />
+      <workItem from="1710989601064" duration="15586000" />
     </task>
     <servers />
   </component>
@@ -585,7 +585,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="328830000" />
+    <option name="totallyTimeSpent" value="330336000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -597,9 +597,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="490" y="510" width="1014" height="822" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="830" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49928263" visible="true" weight="0.36610878" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49928263" visible="true" weight="0.23458445" />
       <window_info id="Structure" order="1" sideWeight="0.50071734" side_tool="true" weight="0.14410187" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -609,13 +609,13 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32855093" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.62266856" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3701578" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998565" />
       <window_info anchor="bottom" id="Database Changes" order="7" weight="0.32998565" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.7880987" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.66427547" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32855093" />
       <window_info anchor="bottom" id="Spring" order="11" />
@@ -735,13 +735,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_301/src.zip!/java/io/Serializable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/http/HttpStatus.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
@@ -1090,10 +1083,18 @@
     <entry file="file://$PROJECT_DIR$/kaoyan/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/kaoyan/src/main/resources/static/js/community.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+        <state relative-caret-position="147">
+          <caret line="21" column="71" selection-start-line="21" selection-start-column="71" selection-end-line="21" selection-end-column="71" />
         </state>
       </provider>
     </entry>
