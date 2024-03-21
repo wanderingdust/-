@@ -1,0 +1,1132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="d015fd4a-8738-4e4a-b738-641a780c7e76" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/advice/CustomizeExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/config/MyBatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/CommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/CustomizeErrorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/ProfileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/PublishController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/QuestionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/exception/CustomizeException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/exception/ICustomizeErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/exception/implement/CustomizeErrorCode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/interceptor/SessionInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/interceptor/WebConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/mapper/BaseMapper/CommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/mapper/BaseMapper/QuestionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/CommentDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/PaginationDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/QuestionDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/Question.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/CommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/PublishService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/QuestionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/CommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/PublishServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/QuestionServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/CommentTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/static/css/community.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/static/js/community.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/navigation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/publish.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/question.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/UserInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/LoginDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/RegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/RegisterDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/ResultCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/ResultCodeEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/index.html" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/kaoyan/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/test3$KaoyanApplication.ic" NAME="KaoyanApplication Coverage Results" MODIFIED="1707189338838" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="216" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="community@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="community@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="community@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="community: schema" type="c314c289:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="community@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="community: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="user: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-557880870">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="35" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="2" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.12" value="4" />
+          <entry key="project.open.time.13" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.15" value="4" />
+          <entry key="project.open.time.16" value="4" />
+          <entry key="project.open.time.17" value="2" />
+          <entry key="project.open.time.18" value="1" />
+          <entry key="project.open.time.19" value="2" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.22" value="2" />
+          <entry key="project.open.time.24" value="2" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.38" value="1" />
+          <entry key="project.open.time.39" value="2" />
+          <entry key="project.open.time.40" value="1" />
+          <entry key="project.open.time.44" value="1" />
+          <entry key="project.open.time.57" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="39" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="148" />
+          <entry key="css" value="7" />
+          <entry key="gitignore" value="4" />
+          <entry key="html" value="97" />
+          <entry key="iml" value="2" />
+          <entry key="java" value="531" />
+          <entry key="js" value="2" />
+          <entry key="md" value="2" />
+          <entry key="properties" value="21" />
+          <entry key="sql" value="1" />
+          <entry key="user" value="1" />
+          <entry key="xml" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="148" />
+          <entry key="CSS" value="7" />
+          <entry key="Database Element" value="1" />
+          <entry key="HTML" value="97" />
+          <entry key="IDEA_MODULE" value="2" />
+          <entry key="JAVA" value="531" />
+          <entry key="JavaScript" value="2" />
+          <entry key="Markdown" value="2" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Properties" value="21" />
+          <entry key="Scratch" value="1" />
+          <entry key="XML" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="313" />
+          <entry key="dummy" value="8" />
+          <entry key="html" value="3264" />
+          <entry key="java" value="10238" />
+          <entry key="js" value="457" />
+          <entry key="properties" value="318" />
+          <entry key="txt" value="18" />
+          <entry key="xml" value="114" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="313" />
+          <entry key="HTML" value="3264" />
+          <entry key="JAVA" value="10238" />
+          <entry key="JavaScript" value="457" />
+          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="Properties" value="318" />
+          <entry key="XML" value="114" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kaoyan/src/main/resources/templates/question.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/kaoyan/src/main/resources/static/js/community.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/kaoyan/src/main/resources/templates/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>No message available</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/kaoyan" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/JwtHelper.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/mapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/MD5Util.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/LoginDto.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/UserService.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/mapper/BaseMapper/UserMapper.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/User.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/QuestionDTO.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/paginationDTO.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/PaginationDTO.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/mapper/BaseMapper/QuestionMapper.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/ResultCodeEnum.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/ProfileController.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/interceptor/SessionInterceptor.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/IndexController.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/resources/templates/navigation.html" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/resources/templates/publish.html" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/PublishService.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/resources/templates/profile.html" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/PublishController.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/resources/templates/error.html" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/exception/CustomizeErrorCode.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/CustomizeErrorController.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/QuestionController.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/Question.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/config/MyBatisPlusConfig.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/PublishServiceImpl.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/Comment.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/QuestionService.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/mapper/BaseMapper/CommentMapper.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/UserInfoController.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/interceptor/WebConfig.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/CommentDTO.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/exception/ICustomizeErrorCode.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/exception/CustomizeException.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/Result.java" />
+        <option value="$PROJECT_DIR$/kaoyan/pom.xml" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/advice/CustomizeExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/QuestionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/CommentTypeEnum.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/exception/implement/CustomizeErrorCode.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/CommentService.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/CommentController.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/CommentServiceImpl.java" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/resources/static/css/community.css" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/resources/templates/question.html" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/kaoyan/src/main/resources/static/js/community.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\maven\maven-repository" />
+        <option name="mavenHome" value="D:/maven/apache-maven-3.6.1-bin/apache-maven-3.6.1" />
+        <option name="userSettingsFile" value="D:\maven\apache-maven-3.6.1-bin\apache-maven-3.6.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="enabledProfiles">
+      <list>
+        <option value="jdk-1.8" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="kaoyan" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="kaoyan" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="delegateBuildToMaven" value="true" />
+    <option name="jreName" value="#JAVA_HOME" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="767" />
+    <option name="width" value="1159" />
+    <option name="height" value="1028" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="test3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test3" type="462c0819:PsiDirectoryNode" />
+              <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="test3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="test3" type="462c0819:PsiDirectoryNode" />
+              <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="redshift&#10;mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/templates/index.html&#10;commu&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/static/css/community.css&#10;Comment&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/java/com/bishe/kaoyan/utils/CommentTypeEnum.java&#10;CustomE&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/java/com/bishe/kaoyan/exception/implement/CustomizeErrorCode.java&#10;ICu&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/java/com/bishe/kaoyan/exception/ICustomizeErrorCode.java&#10;comment&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/Comment.java&#10;BasicErrorController&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController&#10;basic&#9;FILE&#9;jar://D:/maven/maven-repository/org/springframework/boot/spring-boot-autoconfigure/2.1.4.RELEASE/spring-boot-autoconfigure-2.1.4.RELEASE.jar!/org/springframework/boot/autoconfigure/web/servlet/error/BasicErrorController.class&#10;BasicErrorC&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController&#10;DefaultErrorAttribute&#9;PSI&#9;JAVA://org.springframework.boot.web.servlet.error.DefaultErrorAttributes&#10;comm&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/static/css/community.css&#10;publi&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/templates/publish.html&#10;q&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/templates/question.html" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1711029411584" />
+    <property name="database.console.LAST_STATE" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javaweb/Suiyu" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Users\spring-workplace\test3\kaoyan\src\main\resources\templates" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.bishe.kaoyan.interceptor" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.KaoyanApplication">
+    <configuration name="All Features in: kaoyan" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <option name="CUCUMBER_CORE_VERSION" value="3" />
+      <option name="FILE_PATH" value="$PROJECT_DIR$/kaoyan" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <module name="test3" />
+      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm3SMFormatter" />
+      <option name="SUGGESTED_NAME" value="All Features in: kaoyan" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="KaoyanApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="kaoyan" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.bishe.kaoyan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.bishe.kaoyan" />
+      <option name="MAIN_CLASS_NAME" value="com.bishe.kaoyan.KaoyanApplicationTests" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/test3/kaoyan/src/main/resources/templates/index.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="KaoyanApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="kaoyan" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bishe.kaoyan.KaoyanApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.KaoyanApplication" />
+      <item itemvalue="Cucumber java.All Features in: kaoyan" />
+      <item itemvalue="JavaScript Debug.index.html" />
+      <item itemvalue="JUnit.KaoyanApplicationTests" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JUnit.KaoyanApplicationTests" />
+        <item itemvalue="Cucumber java.All Features in: kaoyan" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d015fd4a-8738-4e4a-b738-641a780c7e76" name="Default Changelist" comment="" />
+      <created>1706238601389</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1706238601389</updated>
+      <workItem from="1706238602975" duration="4387000" />
+      <workItem from="1706263959271" duration="6174000" />
+      <workItem from="1706340468475" duration="1185000" />
+      <workItem from="1706432502545" duration="8534000" />
+      <workItem from="1706491195379" duration="7533000" />
+      <workItem from="1706537456560" duration="1779000" />
+      <workItem from="1706582046117" duration="2700000" />
+      <workItem from="1706607251388" duration="3694000" />
+      <workItem from="1707013183564" duration="16067000" />
+      <workItem from="1707104374508" duration="9941000" />
+      <workItem from="1707184859088" duration="10111000" />
+      <workItem from="1707269687664" duration="4501000" />
+      <workItem from="1707964613188" duration="9461000" />
+      <workItem from="1708068493792" duration="20912000" />
+      <workItem from="1708131177109" duration="17692000" />
+      <workItem from="1708325695440" duration="3246000" />
+      <workItem from="1708352413659" duration="876000" />
+      <workItem from="1708415520681" duration="8860000" />
+      <workItem from="1708481340417" duration="9023000" />
+      <workItem from="1708608871300" duration="2383000" />
+      <workItem from="1708673456923" duration="3332000" />
+      <workItem from="1708765585766" duration="7324000" />
+      <workItem from="1708831694697" duration="8282000" />
+      <workItem from="1708916919870" duration="8447000" />
+      <workItem from="1709010959138" duration="9446000" />
+      <workItem from="1709038015344" duration="4932000" />
+      <workItem from="1709090052753" duration="6815000" />
+      <workItem from="1709208538106" duration="5469000" />
+      <workItem from="1709264847401" duration="14109000" />
+      <workItem from="1709344214278" duration="22351000" />
+      <workItem from="1709523892897" duration="10609000" />
+      <workItem from="1709605094572" duration="13592000" />
+      <workItem from="1710061150528" duration="4828000" />
+      <workItem from="1710138881077" duration="7197000" />
+      <workItem from="1710235964511" duration="3775000" />
+      <workItem from="1710465351455" duration="27467000" />
+      <workItem from="1710854334583" duration="3328000" />
+      <workItem from="1710923055309" duration="4388000" />
+      <workItem from="1710989601064" duration="12937000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="All_Features_in__kaoyan - 2024.01.26 at 20h 35m 48s.xml">
+      <configuration name="All Features in: kaoyan" configurationId="CucumberJavaRunConfigurationType" />
+    </history-entry>
+    <history-entry file="KaoyanApplicationTests - 2024.03.19 at 20h 58m 28s.xml">
+      <configuration name="KaoyanApplicationTests" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="327687000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-7" y="-7" width="1550" height="830" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49928263" visible="true" weight="0.23458445" />
+      <window_info id="Structure" order="1" sideWeight="0.50071734" side_tool="true" weight="0.14410187" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32855093" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3701578" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32998565" />
+      <window_info anchor="bottom" id="Database Changes" order="7" weight="0.32998565" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.19081779" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32855093" />
+      <window_info anchor="bottom" id="Spring" order="11" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.4318508" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.32998565" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.3297587" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.4819035" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3297587" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14437085" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22060958" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.17934003" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32998565" />
+      <window_info anchor="bottom" id="Database Changes" order="7" weight="0.32998565" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.5164993" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32855093" />
+      <window_info anchor="bottom" id="Spring" order="11" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.4748924" />
+      <window_info anchor="bottom" id="Database Console" order="14" weight="0.32998565" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" weight="0.3297587" />
+      <window_info anchor="right" id="Maven Projects" order="8" weight="0.48257372" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+      <window_info anchor="right" id="Coverage" order="10" side_tool="true" weight="0.3297587" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-method">
+          <url>jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus-core/3.5.3.1/mybatis-plus-core-3.5.3.1.jar!/com/baomidou/mybatisplus/core/mapper/BaseMapper.class</url>
+          <line>17</line>
+          <properties class="com.baomidou.mybatisplus.core.mapper.BaseMapper" method="insert" />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="SpringBootApplicationConfigurationType">
+        <watch expression="e" />
+        <watch expression="e" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_301/src.zip!/java/io/Serializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/http/HttpStatus.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="79" column="4" selection-start-line="79" selection-start-column="4" selection-end-line="79" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/config/MyBatisPlusConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="16" column="85" selection-start-line="16" selection-start-column="85" selection-end-line="16" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/mapper/BaseMapper/QuestionMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="8" column="1" lean-forward="true" selection-start-line="6" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/mapper/BaseMapper/CommentMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/PublishService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="7" column="50" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/interceptor/SessionInterceptor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/ProfileController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="42" column="21" selection-start-line="42" selection-start-column="21" selection-end-line="42" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/interceptor/WebConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/CommentDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/Comment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/exception/ICustomizeErrorCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1643">
+          <caret line="105" column="58" lean-forward="true" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="9" column="15" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/UserInfoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.6.RELEASE/spring-webmvc-5.1.6.RELEASE.jar!/org/springframework/web/servlet/ModelAndView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_301/src.zip!/java/lang/RuntimeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_301/src.zip!/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="114" column="13" selection-start-line="114" selection-start-column="13" selection-end-line="114" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_301/src.zip!/java/lang/Exception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="44" column="37" selection-start-line="44" selection-start-column="37" selection-end-line="44" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/target/test-classes/com/bishe/kaoyan/KaoyanApplicationTests.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="25" lean-forward="true" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/test/java/com/bishe/kaoyan/KaoyanApplicationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/target/classes/com/bishe/kaoyan/service/implement/QuestionServiceImpl.class" />
+    <entry file="file://$PROJECT_DIR$/kaoyan/kaoyan.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2788" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/target/classes/templates/error.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="397">
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/KaoyanApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/PublishController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="700">
+          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/PublishServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-362">
+          <caret line="115" column="51" selection-start-line="115" selection-start-column="51" selection-end-line="115" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/ResultCodeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/Result.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1450">
+          <caret line="60" lean-forward="true" selection-start-line="60" selection-end-line="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/CustomizeErrorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/5.1.6.RELEASE/spring-webmvc-5.1.6.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/exception/CustomizeException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/advice/CustomizeExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="36" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/QuestionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/CommentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="30" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/QuestionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="53" column="53" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="53" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/QuestionController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/exception/implement/CustomizeErrorCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/CommentTypeEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/CommentController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/resources/static/css/community.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="35" column="1" lean-forward="true" selection-start-line="35" selection-start-column="1" selection-end-line="35" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/CommentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/resources/templates/navigation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="93" column="70" selection-start-line="93" selection-start-column="70" selection-end-line="93" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/resources/templates/question.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="6" lean-forward="true" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/resources/static/js/community.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>test3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
