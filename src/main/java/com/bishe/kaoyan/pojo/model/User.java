@@ -10,11 +10,12 @@ public class User {
     private Integer id;
     private String phone;
     private String password;
-    private String nick_name;
+    private String nickName;
     @TableField(value = "user_create")
-    private Timestamp create_time;
+    private Timestamp createTime;
     @TableField(value = "user_modified")
-    private Timestamp modified_time;
+    private Timestamp modifiedTime;
+    private String headSculpture;
 
     public Integer getId() {
         return id;
@@ -40,27 +41,35 @@ public class User {
         this.password = password;
     }
 
-    public String getNick_name() {
-        return nick_name;
+    public String getNickName() {
+        return nickName;
     }
 
-    public void setNick_name(String nick_name) {
-        this.nick_name = nick_name;
+    public void setNickName(String nickName) {
+        this.nickName = nickName;
     }
 
-    public Timestamp getCreate_time() {
-        return create_time;
+    public Timestamp getCreateTime() {
+        return createTime;
     }
 
-    public void setCreate_time(Timestamp create_time) {
-        this.create_time = create_time;
+    public void setCreateTime(Timestamp createTime) {
+        this.createTime = createTime;
     }
 
-    public Timestamp getModified_time() {
-        return modified_time;
+    public Timestamp getModifiedTime() {
+        return modifiedTime;
     }
 
-    public void setModified_time(Timestamp modified_time) {
-        this.modified_time = modified_time;
+    public void setModifiedTime(Timestamp modifiedTime) {
+        this.modifiedTime = modifiedTime;
+    }
+
+    public String getHeadSculpture() {
+        return headSculpture;
+    }
+
+    public void setHeadSculpture(String headSculpture) {
+        this.headSculpture = headSculpture;
     }
 }

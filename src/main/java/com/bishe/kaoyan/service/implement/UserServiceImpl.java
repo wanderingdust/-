@@ -52,6 +52,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
            //账号密码正确
             //根据用户唯一标识生成token
             String token = jwtHelper.createToken(Long.valueOf(loginUser.getId()));
+            System.out.println(token);
 
             Map data = new HashMap();
             data.put("token",token);
@@ -66,7 +67,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
     @Override
     public Result register(User user) {
         LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
-        queryWrapper.eq(User::getPhone,user.getPhone());
+        queryWrapper.eq(User::getPhone,user.getPhone());//where条件，select * from user where user.getPhone()==User::getPhone
         Long count = userMapper.selectCount(queryWrapper);
 
         if (count > 0){
@@ -92,6 +93,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         int userId = jwtHelper.getUserId(token).intValue();
 
         //3.查询数据
+
         User user = userMapper.selectById(userId);
 
         if (user != null) {

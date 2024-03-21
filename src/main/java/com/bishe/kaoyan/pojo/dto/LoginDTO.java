@@ -1,6 +1,6 @@
 package com.bishe.kaoyan.pojo.dto;
 
-public class LoginDto {
+public class LoginDTO {
     private String user_phone;
     private String user_password;
 

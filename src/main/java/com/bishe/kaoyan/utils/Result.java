@@ -1,5 +1,8 @@
 package com.bishe.kaoyan.utils;
 
+import com.bishe.kaoyan.exception.CustomizeException;
+import com.bishe.kaoyan.exception.implement.CustomizeErrorCode;
+
 /**
  * 全局统一返回结果类
  */
@@ -48,6 +51,14 @@ public class Result<T> {
         this.setCode(code);
         return this;
     }
+
+    public static Result error(CustomizeException e){
+        return Result.build(null,e.getCode(),e.getMessage());
+    }
+    public static Result error(CustomizeErrorCode errorCode){
+        return Result.build(null,errorCode.getCode(),errorCode.getMessage());
+    }
+
     public Integer getCode() {
         return code;
     }

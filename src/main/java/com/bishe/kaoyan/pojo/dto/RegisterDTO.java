@@ -1,6 +1,6 @@
 package com.bishe.kaoyan.pojo.dto;
 
-public class RegisterDto {
+public class RegisterDTO {
     private String user_nickName;
 
     private String user_phone;
