@@ -2,52 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d015fd4a-8738-4e4a-b738-641a780c7e76" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/advice/CustomizeExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/config/MyBatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/CommentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/CustomizeErrorController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/ProfileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/PublishController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/QuestionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/exception/CustomizeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/exception/ICustomizeErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/exception/implement/CustomizeErrorCode.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/interceptor/SessionInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/interceptor/WebConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/mapper/BaseMapper/CommentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/mapper/BaseMapper/QuestionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/CommentDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/PaginationDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/QuestionDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/Comment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/Question.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/CommentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/PublishService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/QuestionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/CommentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/PublishServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/QuestionServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/CommentTypeEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/static/css/community.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/static/js/community.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/navigation.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/profile.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/publish.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/question.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaoyan" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaoyan/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/UserInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/LoginDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/LoginDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/RegisterDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/dto/RegisterDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/service/implement/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/Result.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/ResultCodeEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/utils/ResultCodeEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/error.html" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/error.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/kaoyan/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/kaoyan/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -103,7 +58,7 @@
     <session id="-557880870">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="35" />
+          <entry key="project.closed" value="36" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="1" />
@@ -138,7 +93,7 @@
           <entry key="gitignore" value="4" />
           <entry key="html" value="97" />
           <entry key="iml" value="2" />
-          <entry key="java" value="531" />
+          <entry key="java" value="532" />
           <entry key="js" value="2" />
           <entry key="md" value="3" />
           <entry key="properties" value="21" />
@@ -154,7 +109,7 @@
           <entry key="Database Element" value="1" />
           <entry key="HTML" value="97" />
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="531" />
+          <entry key="JAVA" value="532" />
           <entry key="JavaScript" value="2" />
           <entry key="Markdown" value="3" />
           <entry key="PLAIN_TEXT" value="4" />
@@ -171,7 +126,7 @@
           <entry key="java" value="10238" />
           <entry key="js" value="457" />
           <entry key="properties" value="318" />
-          <entry key="txt" value="18" />
+          <entry key="txt" value="22" />
           <entry key="xml" value="114" />
         </counts>
       </usages-collector>
@@ -181,7 +136,7 @@
           <entry key="HTML" value="3264" />
           <entry key="JAVA" value="10238" />
           <entry key="JavaScript" value="457" />
-          <entry key="PLAIN_TEXT" value="26" />
+          <entry key="PLAIN_TEXT" value="30" />
           <entry key="Properties" value="318" />
           <entry key="XML" value="114" />
         </counts>
@@ -308,10 +263,10 @@
     <option name="jreName" value="#JAVA_HOME" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="362" />
-    <option name="y" value="3" />
-    <option name="width" value="1268" />
-    <option name="height" value="1028" />
+    <option name="x" value="361" />
+    <option name="y" value="2" />
+    <option name="width" value="1269" />
+    <option name="height" value="1029" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -333,46 +288,6 @@
               <item name="test3" type="462c0819:PsiDirectoryNode" />
               <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="test3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test3" type="462c0819:PsiDirectoryNode" />
-              <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test3" type="462c0819:PsiDirectoryNode" />
-              <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test3" type="462c0819:PsiDirectoryNode" />
-              <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test3" type="462c0819:PsiDirectoryNode" />
-              <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="test3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="test3" type="462c0819:PsiDirectoryNode" />
-              <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="kaoyan" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -389,7 +304,7 @@
     <property name="SearchEverywhereHistoryKey" value="index&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/templates/index.html&#10;commu&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/static/css/community.css&#10;Comment&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/java/com/bishe/kaoyan/utils/CommentTypeEnum.java&#10;CustomE&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/java/com/bishe/kaoyan/exception/implement/CustomizeErrorCode.java&#10;ICu&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/java/com/bishe/kaoyan/exception/ICustomizeErrorCode.java&#10;comment&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/java/com/bishe/kaoyan/pojo/model/Comment.java&#10;BasicErrorController&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController&#10;basic&#9;FILE&#9;jar://D:/maven/maven-repository/org/springframework/boot/spring-boot-autoconfigure/2.1.4.RELEASE/spring-boot-autoconfigure-2.1.4.RELEASE.jar!/org/springframework/boot/autoconfigure/web/servlet/error/BasicErrorController.class&#10;BasicErrorC&#9;PSI&#9;JAVA://org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController&#10;DefaultErrorAttribute&#9;PSI&#9;JAVA://org.springframework.boot.web.servlet.error.DefaultErrorAttributes&#10;comm&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/static/css/community.css&#10;publi&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/templates/publish.html&#10;q&#9;FILE&#9;file://D:/Users/spring-workplace/test3/kaoyan/src/main/resources/templates/question.html" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1711033284776" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1711033461844" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javaweb/Suiyu" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -524,8 +439,16 @@
       <workItem from="1710465351455" duration="27467000" />
       <workItem from="1710854334583" duration="3328000" />
       <workItem from="1710923055309" duration="4388000" />
-      <workItem from="1710989601064" duration="16680000" />
+      <workItem from="1710989601064" duration="16863000" />
     </task>
+    <task id="LOCAL-00001" summary="3.21">
+      <created>1711033453818</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1711033453819</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -537,7 +460,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="331430000" />
+    <option name="totallyTimeSpent" value="331613000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -567,7 +490,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32998565" />
       <window_info anchor="bottom" id="Database Changes" order="7" weight="0.32998565" />
-      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.15064563" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.19655667" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32855093" />
       <window_info anchor="bottom" id="Spring" order="11" />
@@ -664,6 +587,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="3.21" />
+    <option name="LAST_COMMIT_MESSAGE" value="3.21" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -871,6 +798,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-362">
           <caret line="115" column="51" selection-start-line="115" selection-start-column="51" selection-end-line="115" selection-end-column="51" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -888,13 +818,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/CustomizeErrorController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-375">
-          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1047,6 +970,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="250">
           <caret line="16" column="27" lean-forward="true" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kaoyan/src/main/java/com/bishe/kaoyan/controller/CustomizeErrorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
         </state>
       </provider>
     </entry>
