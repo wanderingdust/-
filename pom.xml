@@ -102,6 +102,12 @@
             <optional>true</optional>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.9</version>
+        </dependency>
+
         <!--json依赖-->
         <!--上面某依赖包含了这个
         <dependency>

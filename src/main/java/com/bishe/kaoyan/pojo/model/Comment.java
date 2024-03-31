@@ -22,6 +22,9 @@ public class Comment {
     @TableField(value = "like_count")
     private Integer likeCount;
 
+    @TableField(value = "comment_count")
+    private Integer commentCount;
+
     @TableField(value = "gmt_create")
     private Timestamp gmtCreate;
 
@@ -101,5 +104,13 @@ public class Comment {
 
     public void setVersion(Integer version) {
         this.version = version;
+    }
+
+    public Integer getCommentCount() {
+        return commentCount;
+    }
+
+    public void setCommentCount(Integer commentCount) {
+        this.commentCount = commentCount;
     }
 }

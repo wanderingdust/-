@@ -53,9 +53,11 @@ public class PublishServiceImpl extends ServiceImpl<QuestionMapper, Question>
         if(offset%size != 0 && page > offset/size+1){
             page = (offset/size) + 1;
         }
+        LambdaQueryWrapper<Question> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.orderByDesc(Question::getGmtCreate);
 
         Page<Question> questionPage = new Page<>(page, size);
-        questionMapper.selectPage(questionPage, null);
+        questionMapper.selectPage(questionPage, queryWrapper);
 
         System.out.println("当   前   页"+questionPage.getCurrent());
         System.out.println("总   页   数"+questionPage.getPages());

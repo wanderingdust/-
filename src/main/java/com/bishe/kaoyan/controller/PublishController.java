@@ -1,12 +1,14 @@
 package com.bishe.kaoyan.controller;
 
 
+import com.bishe.kaoyan.cache.TagCache;
 import com.bishe.kaoyan.pojo.dto.QuestionDTO;
 import com.bishe.kaoyan.pojo.model.Question;
 import com.bishe.kaoyan.pojo.model.User;
 import com.bishe.kaoyan.service.PublishService;
 import com.bishe.kaoyan.service.QuestionService;
 import com.bishe.kaoyan.utils.Result;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,11 +36,13 @@ public class PublishController {
         model.addAttribute("description", questionDTO.getDescription());
         model.addAttribute("tag", questionDTO.getTag());
         model.addAttribute("id",questionDTO.getId());
+        model.addAttribute("tags", TagCache.get());
         return "publish.html";
     }
 
     @GetMapping(value = "/publish")
-    public String publish(){
+    public String publish(Model model){
+        model.addAttribute("tags", TagCache.get());
         return "publish.html";
     }
     @PostMapping(value ="/publish",produces = "application/json;charset=UTF-8")
@@ -52,6 +56,7 @@ public class PublishController {
         model.addAttribute("description", question.getDescription());
         model.addAttribute("tag", question.getTag());
         model.addAttribute("id", question.getId());
+        model.addAttribute("tags", TagCache.get());
         if (question.getTitle() == null||question.getTitle() == ""){
             model.addAttribute("error","标题不能为空");
             return "publish";
@@ -66,6 +71,12 @@ public class PublishController {
         }
         if (user == null){
             model.addAttribute("error","用户未登录");
+            return "publish";
+        }
+
+        String invalid = TagCache.filterInvalid(question.getTag());
+        if (StringUtils.isNotBlank(invalid)){
+            model.addAttribute("error", "非法标签：" + invalid);
             return "publish";
         }
 

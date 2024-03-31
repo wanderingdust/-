@@ -86,7 +86,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         //1.判定是否有效期
         if (jwtHelper.isExpiration(token)) {
             //true过期,直接返回未登录
-            return Result.build(null,ResultCodeEnum.NOTLOGIN);
+            return Result.build(null,ResultCodeEnum.NOT_LOGIN);
         }
 
         //2.获取token对应的用户
@@ -103,6 +103,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
             return Result.ok(data);
         }
 
-        return Result.build(null,ResultCodeEnum.NOTLOGIN);
+        return Result.build(null,ResultCodeEnum.NOT_LOGIN);
     }
 }

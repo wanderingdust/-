@@ -10,11 +10,13 @@ public class User {
     private Integer id;
     private String phone;
     private String password;
+    @TableField(value = "nick_name")
     private String nickName;
     @TableField(value = "user_create")
     private Timestamp createTime;
     @TableField(value = "user_modified")
     private Timestamp modifiedTime;
+    @TableField(value = "head_sculpture")
     private String headSculpture;
 
     public Integer getId() {
