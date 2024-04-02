@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 //对返回页码的包装
-public class PaginationDTO {
-    private List<QuestionDTO> questions;
+public class PaginationDTO<T> {
+    private List<T> data;
     private boolean showPrevious;//是否有前按钮
     private boolean showFirstPage;//是否有最前按钮
     private boolean showNext;//是否有后按钮
@@ -15,54 +15,61 @@ public class PaginationDTO {
     private Integer totalPage;
 
     public void setPagnation(Integer totalCount, Integer page, Integer size) {
-        Integer totalPage;
-        this.page = page;
-        if(totalCount % size == 0)
-            totalPage = totalCount / size;
-        else
-            totalPage = totalCount / size + 1;
+        if (totalCount == 0){
+            this.showPrevious = false;
+            this.showFirstPage = false;
+            this.showNext = false;
+            this.showEndPage = false;
+        }else {
+            Integer totalPage;
+            this.page = page;
+            if(totalCount % size == 0)
+                totalPage = totalCount / size;
+            else
+                totalPage = totalCount / size + 1;
 
-        pages.add(page);
-        //显示页码的多少
-        for(int i = 1; i <= 3; i++){
-            if(page - i > 0)
-                pages.add(0,page - i);
+            pages.add(page);
+            //显示页码的多少
+            for(int i = 1; i <= 3; i++){
+                if(page - i > 0)
+                    pages.add(0,page - i);
 
-            if(page + i <= totalPage)
-                pages.add(page + i);
+                if(page + i <= totalPage)
+                    pages.add(page + i);
+            }
+
+            //是否展示上一页
+            if(page == 1)
+                showPrevious = false;
+            else
+                showPrevious = true;
+
+            //是否展示下一页
+            if(page == totalPage)
+                showNext = false;
+            else
+                showNext = true;
+
+            //是否展示第一页
+            if(pages.contains(1))
+                showFirstPage = false;
+            else
+                showFirstPage = true;
+
+            //是否展示最后一页
+            if(pages.contains(totalPage))
+                showEndPage = false;
+            else
+                showEndPage = true;
         }
-
-        //是否展示上一页
-        if(page == 1)
-            showPrevious = false;
-        else
-            showPrevious = true;
-
-        //是否展示下一页
-        if(page == totalPage)
-            showNext = false;
-        else
-            showNext = true;
-
-        //是否展示第一页
-        if(pages.contains(1))
-            showFirstPage = false;
-        else
-            showFirstPage = true;
-
-        //是否展示最后一页
-        if(pages.contains(totalPage))
-            showEndPage = false;
-        else
-            showEndPage = true;
     }
 
-    public List<QuestionDTO> getQuestions() {
-        return questions;
+    public List<T> getData() {
+        return data;
     }
 
-    public void setQuestions(List<QuestionDTO> questions) {
-        this.questions = questions;
+    public void setData(List<T> data) {
+        this.data = data;
     }
 
     public boolean isShowPrevious() {

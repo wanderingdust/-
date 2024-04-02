@@ -5,16 +5,16 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bishe.kaoyan.exception.CustomizeException;
 import com.bishe.kaoyan.exception.implement.CustomizeErrorCode;
 import com.bishe.kaoyan.mapper.BaseMapper.CommentMapper;
+import com.bishe.kaoyan.mapper.BaseMapper.NotificationMapper;
 import com.bishe.kaoyan.mapper.BaseMapper.QuestionMapper;
 import com.bishe.kaoyan.mapper.BaseMapper.UserMapper;
 import com.bishe.kaoyan.pojo.dto.CommentDTO;
 import com.bishe.kaoyan.pojo.model.Comment;
+import com.bishe.kaoyan.pojo.model.Notification;
 import com.bishe.kaoyan.pojo.model.Question;
 import com.bishe.kaoyan.pojo.model.User;
 import com.bishe.kaoyan.service.CommentService;
-import com.bishe.kaoyan.utils.CommentTypeEnum;
-import com.bishe.kaoyan.utils.Result;
-import com.bishe.kaoyan.utils.ResultCodeEnum;
+import com.bishe.kaoyan.utils.*;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
@@ -40,6 +40,9 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment>
 
     @Resource(name="userMapper")
     private UserMapper userMapper;
+
+    @Resource(name="notificationMapper")
+    private NotificationMapper notificationMapper;
 
     @Override
     public void incComment(Integer id, Integer type){
@@ -68,7 +71,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment>
 
     @Override
     @Transactional//添加事务，防止插入评论失败后评论数增加，若插入失败就回滚
-    public void response(Comment comment){
+    public void response(Comment comment, User commentator){//传入评论和评论者
 
         if (comment.getParentId() == null || comment.getParentId() == 0) {
             throw new CustomizeException(CustomizeErrorCode.TARGET_PARAM_NOT_FOUND);
@@ -79,19 +82,40 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment>
         }
 
         if (comment.getType() == CommentTypeEnum.COMMENT.getType()){//回复评论
-            Comment dbComment = commentMapper.selectById(comment.getParentId());
-            if (dbComment == null){//若评论不存在
+            Comment dbcomment = commentMapper.selectById(comment.getParentId());//根据二级评论comment的parentId找到一级评论dbcomment
+            if (dbcomment == null){//若目标评论不存在
                 throw new CustomizeException(CustomizeErrorCode.COMMENT_NOT_FOUND);
             }
+            Question question = questionMapper.selectById(dbcomment.getParentId());//根据一级评论dbcomment的parentId找到question
+            //创建通知
+           createNotify(comment, dbcomment.getCommentator(), commentator.getNickName(),
+                   question.getTitle(), NotificationTypeEnum.REPLY_COMMENT, question.getId());
         }else { //回复问题
-            Question Question = questionMapper.selectById(comment.getParentId());
-            if (Question == null){//若问题不存在
+            Question question = questionMapper.selectById(comment.getParentId());
+            if (question == null){//若目标问题不存在
                 throw new CustomizeException(CustomizeErrorCode.QUESTION_NOT_FOUND);
             }
+            //创建通知
+            createNotify(comment, question.getCreator(), commentator.getNickName(),
+                    question.getTitle(), NotificationTypeEnum.REPLY_QUESTION, question.getId());
         }
         int rows = commentMapper.insert(comment);
         incComment(comment.getParentId(),comment.getType());
         System.out.println("回复成功，插入数据数为" + rows);
+    }
+
+    private void createNotify(Comment comment, int receiver, String notifierName,
+                              String outerTitle,
+                              NotificationTypeEnum notificationType, Integer outerId) {
+        Notification notification = new Notification();
+        notification.setType(notificationType.getType());
+        notification.setOuterId(outerId);
+        notification.setNotifier(comment.getCommentator());
+        notification.setStatus(NotificationStatusEnum.UNREAD.getStatus());
+        notification.setReceiver(receiver);
+        notification.setNotifierName(notifierName);
+        notification.setOuterTitle(outerTitle);
+        notificationMapper.insert(notification);
     }
 
     @Override

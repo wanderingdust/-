@@ -2,7 +2,6 @@ package com.bishe.kaoyan.controller;
 
 
 import com.bishe.kaoyan.pojo.dto.CommentCreateDTO;
-import com.bishe.kaoyan.pojo.dto.CommentDTO;
 import com.bishe.kaoyan.pojo.model.Comment;
 import com.bishe.kaoyan.pojo.model.User;
 import com.bishe.kaoyan.service.CommentService;
@@ -14,7 +13,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
-import java.util.List;
 
 @RestController("commentController")
 public class CommentController {
@@ -41,14 +39,13 @@ public class CommentController {
         comment.setCommentator(user.getId());
         comment.setLikeCount(0);
         System.out.println(commentCreateDTO.getContent());
-        commentService.response(comment);
+        commentService.response(comment, user);//传入评论和评论者
         return Result.build(null,ResultCodeEnum.SUCCESS);
     }
 
     @ResponseBody
     @RequestMapping(value = "/comment/{id}",method = RequestMethod.GET)
     public Result comments(@PathVariable(name = "id")Integer id){
-        //List<CommentDTO> commentDTOS = (List<CommentDTO>)commentService.listByParentId(id, CommentTypeEnum.COMMENT).getData();
         return commentService.listByParentId(id, CommentTypeEnum.COMMENT);
     }
 }

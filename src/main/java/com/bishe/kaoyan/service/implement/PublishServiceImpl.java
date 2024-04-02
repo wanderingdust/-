@@ -80,7 +80,7 @@ public class PublishServiceImpl extends ServiceImpl<QuestionMapper, Question>
         Integer totalCount = a.intValue();
         a = questionPage.getPages();
         paginationDTO.setPagnation(totalCount, page, size);
-        paginationDTO.setQuestions(questionDTOList);
+        paginationDTO.setData(questionDTOList);
         paginationDTO.setTotalPage(a.intValue());
         return Result.ok(paginationDTO);
     }
@@ -124,7 +124,7 @@ public class PublishServiceImpl extends ServiceImpl<QuestionMapper, Question>
         Integer totalCount = a.intValue();
         a = questionPage.getPages();
         paginationDTO.setPagnation(totalCount, page, size);
-        paginationDTO.setQuestions(questionDTOList);
+        paginationDTO.setData(questionDTOList);
         paginationDTO.setTotalPage(a.intValue());
         return Result.ok(paginationDTO);
     }
