@@ -7,6 +7,7 @@ package com.bishe.kaoyan.utils;
 public enum ResultCodeEnum {
 
     SUCCESS(200,"成功"),
+    MODIFY_SUCCESS(201,"修改成功"),
     USERNAME_ERROR(501,"用户名错误"),
     PASSWORD_ERROR(503,"密码错误"),
     NOT_LOGIN(504,"未登录"),

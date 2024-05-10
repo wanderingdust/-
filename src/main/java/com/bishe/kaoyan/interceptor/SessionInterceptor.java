@@ -1,6 +1,7 @@
 package com.bishe.kaoyan.interceptor;
 
 import com.bishe.kaoyan.pojo.model.User;
+import com.bishe.kaoyan.service.NotificationService;
 import com.bishe.kaoyan.service.UserService;
 import com.bishe.kaoyan.utils.Result;
 import org.springframework.stereotype.Component;
@@ -19,6 +20,8 @@ public class SessionInterceptor implements HandlerInterceptor {
 
     @Resource(name="userService")
     private UserService userService;
+    @Resource(name="notificationService")
+    private NotificationService notificationService;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
@@ -30,11 +33,13 @@ public class SessionInterceptor implements HandlerInterceptor {
                 break;
             }
         }
-        Result result = userService.getUserInfo(token);
+        Result result = userService.getUserInfo(token);//根据token获取userId，再根据Id返回user
         if(result.getCode() == 200){
             Map map = (Map) result.getData();
             User user = (User) map.get("loginUser");
             request.getSession().setAttribute("loginUser",user);
+            int unreadCount = notificationService.unreadCount(user.getId());
+            request.getSession().setAttribute("unreadCount", unreadCount);
             return true;
         }else{
             System.out.println("已拦截");

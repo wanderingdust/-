@@ -4,7 +4,7 @@ import com.bishe.kaoyan.exception.ICustomizeErrorCode;
 
 public enum  CustomizeErrorCode implements ICustomizeErrorCode {
 
-    QUESTION_NOT_FOUND(2001, "你找的问题不在了"),
+    QUESTION_NOT_FOUND(2001, "你找的文章不在了"),
     TARGET_PARAM_NOT_FOUND(2002, "未选中任何评论进行回复"),
     NOT_LOGIN(2003, "请登录后重试"),
     SYS_ERROR(2004,"你到底干了啥啊，服务器冒烟啦，哈哈哈"),

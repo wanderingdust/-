@@ -30,7 +30,7 @@
                         <h4 class="media-heading">
                             <a th:href="@{'/question/'+${question.id}}" th:text="${question.title}"></a>
                         </h4>
-                        <span th:text="${question.description}"></span> <br>
+                        <span th:text="${question.user.nickName}"></span>发起的文章 <br>
                         <span class="text-desc">
                         <span th:text="${question.commentCount}"></span>个回复*
                         <span th:text="${question.viewCount}"></span>次浏览*
@@ -89,15 +89,16 @@
         </div>
         <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
             <div class="list-group section">
-                <a href="/profile/questions" class="list-group-item" th:class="${section == 'questions'}? 'active':''">我的问题</a>
+                <a href="/profile/questions" class="list-group-item" th:class="${section == 'questions'}? 'active':''">我的文章</a>
                 <a href="/profile/replies" class="list-group-item" th:class="${section == 'replies'}? 'active':''">
                     最新回复
-                    <span class="badge" th:text="${unreadCount}"></span>
+                    <span class="badge" th:text="${session.unreadCount}"></span>
                 </a>
             </div>
 
         </div>
     </div>
 </div>
+<div th:insert="~{footer :: foot}"></div>
 </body>
 </html>

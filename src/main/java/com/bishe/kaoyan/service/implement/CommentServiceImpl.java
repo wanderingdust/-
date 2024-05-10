@@ -4,15 +4,9 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bishe.kaoyan.exception.CustomizeException;
 import com.bishe.kaoyan.exception.implement.CustomizeErrorCode;
-import com.bishe.kaoyan.mapper.BaseMapper.CommentMapper;
-import com.bishe.kaoyan.mapper.BaseMapper.NotificationMapper;
-import com.bishe.kaoyan.mapper.BaseMapper.QuestionMapper;
-import com.bishe.kaoyan.mapper.BaseMapper.UserMapper;
+import com.bishe.kaoyan.mapper.BaseMapper.*;
 import com.bishe.kaoyan.pojo.dto.CommentDTO;
-import com.bishe.kaoyan.pojo.model.Comment;
-import com.bishe.kaoyan.pojo.model.Notification;
-import com.bishe.kaoyan.pojo.model.Question;
-import com.bishe.kaoyan.pojo.model.User;
+import com.bishe.kaoyan.pojo.model.*;
 import com.bishe.kaoyan.service.CommentService;
 import com.bishe.kaoyan.utils.*;
 import org.mybatis.spring.annotation.MapperScan;
@@ -43,6 +37,9 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment>
 
     @Resource(name="notificationMapper")
     private NotificationMapper notificationMapper;
+
+    @Resource(name="likesMapper")
+    private LikesMapper likesMapper;
 
     @Override
     public void incComment(Integer id, Integer type){
@@ -88,7 +85,7 @@ public class CommentServiceImpl extends ServiceImpl<CommentMapper, Comment>
             }
             Question question = questionMapper.selectById(dbcomment.getParentId());//根据一级评论dbcomment的parentId找到question
             //创建通知
-           createNotify(comment, dbcomment.getCommentator(), commentator.getNickName(),
+            createNotify(comment, dbcomment.getCommentator(), commentator.getNickName(),
                    question.getTitle(), NotificationTypeEnum.REPLY_COMMENT, question.getId());
         }else { //回复问题
             Question question = questionMapper.selectById(comment.getParentId());

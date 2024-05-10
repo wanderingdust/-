@@ -4,6 +4,7 @@ import com.alibaba.druid.util.StringUtils;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bishe.kaoyan.mapper.BaseMapper.UserMapper;
+import com.bishe.kaoyan.pojo.dto.UserInfoDTO;
 import com.bishe.kaoyan.pojo.model.User;
 import com.bishe.kaoyan.service.UserService;
 import com.bishe.kaoyan.utils.JwtHelper;
@@ -75,8 +76,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         }
 
         user.setPassword(MD5Util.encrypt(user.getPassword()));
-        int rows = userMapper.insert(user);
-        System.out.println("rows = " + rows);
+        user.setHeadSculpture("\\images\\8f650d71e09d46e3ac8dce67acfff894.png");
+        System.out.println("注册了" + userMapper.insert(user) + "个账号");
         return Result.ok(null);
     }
 
@@ -104,5 +105,39 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User>
         }
 
         return Result.build(null,ResultCodeEnum.NOT_LOGIN);
+    }
+
+    @Override
+    public Result modify(UserInfoDTO userInfoDTO) {
+        //根据账号查询
+        LambdaQueryWrapper<User> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(User::getId,userInfoDTO.getId());
+        User loginUser = userMapper.selectOne(queryWrapper);
+
+        //判断密码，如果旧密码不为空且旧密码正确
+        if (!StringUtils.isEmpty(userInfoDTO.getOldPassword())
+                && loginUser.getPassword().equals(MD5Util.encrypt(userInfoDTO.getOldPassword()))) {
+            //账号密码正确
+            User user = new User();
+            //如果新密码不为空
+            if (!StringUtils.isEmpty(userInfoDTO.getNewPassword())){
+                user.setPassword(MD5Util.encrypt(userInfoDTO.getNewPassword()));
+                user.setHeadSculpture(userInfoDTO.getHeadSculpture());
+                user.setNickName(userInfoDTO.getNickName());
+                user.setPhone(userInfoDTO.getPhone());
+                user.setHeadSculpture(userInfoDTO.getHeadSculpture());
+                userMapper.update(user, queryWrapper);
+                return Result.build(null,ResultCodeEnum.MODIFY_SUCCESS);//result.data=null,result.code=201,result.message=修改成功
+            }
+            user.setHeadSculpture(userInfoDTO.getHeadSculpture());
+            user.setNickName(userInfoDTO.getNickName());
+            user.setPhone(userInfoDTO.getPhone());
+            user.setHeadSculpture(userInfoDTO.getHeadSculpture());
+            userMapper.update(user, queryWrapper);
+
+            return Result.ok(null);//result.data=null,result.code=200,result.message=success
+        }
+        //密码错误
+        return Result.build(null,ResultCodeEnum.PASSWORD_ERROR);
     }
 }

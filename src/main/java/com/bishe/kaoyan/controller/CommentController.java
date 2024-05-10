@@ -20,7 +20,6 @@ public class CommentController {
     @Resource(name = "commentService")
     private CommentService commentService;
 
-    //@PostMapping(value ="/comment",produces = "application/json;charset=UTF-8")
     @ResponseBody
     @RequestMapping(value = "/comment",method = RequestMethod.POST)
     public Result comment(@RequestBody CommentCreateDTO commentCreateDTO, HttpServletRequest request) {

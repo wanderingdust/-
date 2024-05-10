@@ -52,7 +52,6 @@ function comment(e) {
  * 展开二级评论
  */
 function collapseComments(e) {
-    debugger;
     var id = e.getAttribute("data-id");
     var comments = $("#comment-"+id);
 
@@ -129,3 +128,84 @@ function selectTag(e) {
         }
     }
 }
+function thumbComments(e) {
+    var thumbId = e.getAttribute("id");
+    var url = e.getAttribute("data-id");
+    var tags =$("#"+thumbId).children("#thumbChildElement");
+
+    $.getJSON("/thumb/" + url ,function(data) {
+        //span标签赋值用html,表单一般用val
+        tags.html(data);
+    });
+}
+
+//验证用户名非空 这段是处理登录用户名
+function ValiDate_UserName(field, alerttxt) {
+    var $UserName= $.trim($("#UserName").val());
+    with (field) {
+        if ($UserName== "" || $UserName== null) {
+            alert(alerttxt);
+            return false
+        } else {
+            return true
+        }
+    }
+}
+//验证密码非空
+function Validate_Pwd(field, alerttxt) {
+    var $PassWord = $.trim($("#PassWord").val());
+    with (field) {
+        if ($PassWord== "" || $PassWord== null) {
+            alert(alerttxt);
+            return false
+        } else {
+            return true
+        }
+    }
+}
+//验证账号非空
+function Validate_phone(field, alerttxt) {
+    var $phone = $.trim($("#phone").val());
+    with (field) {
+        if ($phone== "" || $phone== null) {
+            alert(alerttxt);
+            return false
+        } else {
+            return true
+        }
+    }
+}
+//暂时起名叫 总分配处理器
+function valiDate_Form1() {
+    debugger;
+    var $userName= $("#nickname");	//取前台表单的用户名
+    var $passWord = $("#password");		//取前台表单的密码
+    if (ValiDate_UserName($.trim($userName.val()), "用户名必填") == false) {
+        $UserName.focus();
+        return false
+    } else if ((Validate_Pwd($.trim($passWord.val()), "密码必填") == false)) {
+        $PassWord.focus();
+        return false
+    } else {
+        return true;
+    }
+}
+function valiDate_Form2() {
+    debugger;
+    var $userName= $("#nickname");	//取前台表单的用户名
+    var $passWord = $("#password");		//取前台表单的密码
+    var $phone = $("#phone");		//取前台表单的密码
+    if (ValiDate_UserName($.trim($userName.val()), "用户名必填") == false) {
+        $UserName.focus();
+        return false
+    } else if ((Validate_Pwd($.trim($passWord.val()), "密码必填") == false)) {
+        $PassWord.focus();
+        return false
+    } else if (Validate_phone($.trim($phone.val()), "账号必填") == false){
+        $phone.focus();
+        return false
+    } else {
+        return true;
+    }
+}
+

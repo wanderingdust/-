@@ -42,11 +42,9 @@ public class ProfileController {
             model.addAttribute("profile",profile);
         } else if ("replies".equals(action)) {
             PaginationDTO profile = notificationService.list(user.getId(),page,size);//跟当前用户相关的通知
-            int unreadCount = notificationService.unreadCount(user.getId());
             model.addAttribute("section", "replies");
             model.addAttribute("sectionName", "最新回复");
             model.addAttribute("profile",profile);
-            model.addAttribute("unreadCount",unreadCount);
         }
         return "profile";
     }

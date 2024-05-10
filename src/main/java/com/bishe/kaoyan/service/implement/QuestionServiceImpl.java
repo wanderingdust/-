@@ -4,11 +4,9 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.bishe.kaoyan.exception.CustomizeException;
 import com.bishe.kaoyan.exception.implement.CustomizeErrorCode;
-import com.bishe.kaoyan.mapper.BaseMapper.QuestionMapper;
-import com.bishe.kaoyan.mapper.BaseMapper.UserMapper;
+import com.bishe.kaoyan.mapper.BaseMapper.*;
 import com.bishe.kaoyan.pojo.dto.QuestionDTO;
-import com.bishe.kaoyan.pojo.model.Question;
-import com.bishe.kaoyan.pojo.model.User;
+import com.bishe.kaoyan.pojo.model.*;
 import com.bishe.kaoyan.service.QuestionService;
 import com.bishe.kaoyan.utils.Result;
 import com.bishe.kaoyan.utils.ResultCodeEnum;
@@ -21,6 +19,7 @@ import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service("questionService")
@@ -33,6 +32,15 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question>
 
     @Resource(name="userMapper")
     private UserMapper userMapper;
+
+    @Resource(name="labelMapper")
+    private LabelMapper labelMapper;
+
+    @Resource(name="likesMapper")
+    private LikesMapper likesMapper;
+
+    @Resource(name="commentMapper")
+    private CommentMapper commentMapper;
 
     @Override
     public Result question(Integer id){
@@ -77,5 +85,50 @@ public class QuestionServiceImpl extends ServiceImpl<QuestionMapper, Question>
         }).collect(Collectors.toList());
 
         return questionDTOS;
+    }
+
+    @Override
+    public List<Label> selectLabel(){
+        List<Label> labelList = labelMapper.selectList(null);
+        return labelList;
+    }
+
+    @Override
+    public int like(int targetId, int likerId){//评论Id和点赞者id
+        LambdaQueryWrapper<Likes> queryWrapper = new LambdaQueryWrapper<>();
+        queryWrapper.eq(Likes::getLikerId, likerId).eq(Likes::getTargetId, targetId);
+        LambdaQueryWrapper<Likes> selectqueryWrapper = new LambdaQueryWrapper<>();
+        selectqueryWrapper.eq(Likes::getTargetId, targetId);
+        LambdaQueryWrapper<Comment> commentLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        commentLambdaQueryWrapper.eq(Comment::getId, targetId);
+        Comment comment = commentMapper.selectOne(commentLambdaQueryWrapper);
+        int likeCount;
+        if (likesMapper.selectCount(queryWrapper) > 0){//判断点赞者是否已经点了赞了
+            //点了赞就删除
+            likesMapper.delete(queryWrapper);
+            likeCount = likesMapper.selectCount(selectqueryWrapper).intValue();
+            //更新comment表的赞
+            comment.setLikeCount(likeCount);
+        }else {
+            //没点就在likes表中增加
+            Likes likes = new Likes();
+            likes.setLikerId(likerId);
+            likes.setTargetId(targetId);
+            likes.setType(1);
+            likesMapper.insert(likes);
+            likeCount = likesMapper.selectCount(selectqueryWrapper).intValue();
+            //更新comment表的赞
+            comment.setLikeCount(likeCount);
+        }
+        commentMapper.update(comment,commentLambdaQueryWrapper);
+        return likeCount;
+    }
+
+    @Override
+    public Result popularQuestionList(){
+        LambdaQueryWrapper<Question> questionLambdaQueryWrapper = new LambdaQueryWrapper<>();
+        questionLambdaQueryWrapper.orderByDesc(Question::getViewCount).gt(Question::getViewCount, 5);
+        List<Question> questions = questionMapper.selectList(questionLambdaQueryWrapper);
+        return Result.ok(questions);
     }
 }

@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="/static/js/community.js" type="application/javascript"></script>
 </head>
 <body>
 <div th:fragment="copy">
@@ -16,15 +17,15 @@
             </div>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <form class="navbar-form navbar-left">
+                <form class="navbar-form navbar-left" action="/" method="get">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="搜索话题">
+                        <input type="text" class="form-control" name="search" placeholder="搜索话题">
                     </div>
                     <button type="submit" class="btn btn-default">搜索</button>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
-                    <li th:if="${session.loginUser != null}"><a href="/user/publish">提问</a> </li>
-                    <li th:if="${session.loginUser != null}"><a href="/profile/replies">通知<span class="badge"></span></a></li>
+                    <li th:if="${session.loginUser != null}"><a href="/user/publish">发布</a> </li>
+                    <li th:if="${session.loginUser != null}"><a href="/profile/replies">通知<span class="badge" th:text="${session.unreadCount}"></span></a></li>
                     <li th:if="${session.loginUser == null}"><a data-toggle="modal" data-target="#register"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
                     <li th:if="${session.loginUser == null}"><a data-toggle="modal" data-target="#login"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
                     <li class="dropdown" th:if="${session.loginUser != null}">
@@ -34,8 +35,10 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="/profile/questions">我的问题</a></li>
+                            <li><a href="/profile/questions">我的文章</a></li>
                             <li><a href="/user/logout">退出登录</a></li>
+                            <li><a href="/user/profile">修改个人信息</a></li>
+                            <li th:if="${session.loginUser.id == 1}"><a href="/admin/report">举报</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -56,18 +59,18 @@
                                 <form class="form-group" action="user/register" method="post" >
                                     <div class="form-group">
                                         <label>用户名</label>
-                                        <input class="form-control" type="text" placeholder="6-15位字母或数字" name="nick_name">
+                                        <input class="form-control" type="text" name="nickName">
                                     </div>
                                     <div class="form-group">
                                         <label>密码</label>
-                                        <input class="form-control" type="password" placeholder="至少6位字母或数字" name="password">
+                                        <input class="form-control" type="password" name="password">
                                     </div>
                                     <div class="form-group">
-                                        <label>电话</label>
+                                        <label>账号</label>
                                         <input class="form-control" type="text" name="phone">
                                     </div>
                                     <div class="text-right">
-                                        <button class="btn btn-primary" type="submit">提交</button>
+                                        <button class="btn btn-primary" type="submit" onclick="return valiDate_Form2()">提交</button>
                                         <button class="btn btn-danger" data-dismiss="modal">取消</button>
                                     </div>
                                     <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
@@ -89,9 +92,9 @@
                                 <h1 class="text-center">登录</h1>
                             </div>
                             <div class="modal-body">
-                                <form class="form-group" action="/user/login" method="post">
+                                <form class="form-group" action="/user/login" method="post" >
                                     <div class="form-group">
-                                        <label>电话</label>
+                                        <label>账号</label>
                                         <input class="form-control" type="text" name="phone">
                                     </div>
                                     <div class="form-group">
@@ -99,7 +102,7 @@
                                         <input class="form-control" type="password" name="password">
                                     </div>
                                     <div class="text-right">
-                                        <button class="btn btn-primary" type="submit">登录</button>
+                                        <button class="btn btn-primary" type="submit" onclick="return valiDate_Form1()">登录</button>
                                         <button class="btn btn-danger" data-dismiss="modal">取消</button>
                                     </div>
                                     <a href="" data-toggle="modal" data-dismiss="modal" data-target="#register">还没有账号？点我注册</a>

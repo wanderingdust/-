@@ -19,7 +19,7 @@ public class Notification {
     @TableField(value = "notifier_name")
     private String notifierName;//通知发起者名字
     @TableField(value = "outer_title")
-    private String outerTitle;//
+    private String outerTitle;//通知媒介
 
     public Integer getId() {
         return id;

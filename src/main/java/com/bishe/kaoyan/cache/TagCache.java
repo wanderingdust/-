@@ -12,20 +12,45 @@ public class TagCache {
     public static List<TagDTO> get(){
         List<TagDTO> tagDTOS = new ArrayList<>();
 
-        TagDTO program = new TagDTO();
-        program.setCategoryName("计算机专业");
-        program.setTags(Arrays.asList("操作系统","计算机组成原理","计算机网络","数据结构"));
-        tagDTOS.add(program);
+        TagDTO general = new TagDTO();
+        general.setCategoryName("通用");
+        general.setTags(Arrays.asList("高等数学","大学英语","思想政治理论","线性代数","概率论与数理统计"));
+        tagDTOS.add(general);
 
-        TagDTO framwork = new TagDTO();
-        framwork.setCategoryName("金融专业");
-        framwork.setTags(Arrays.asList("会计","经济学","统计学","人类社会学"));
-        tagDTOS.add(framwork);
+        TagDTO computer = new TagDTO();
+        computer.setCategoryName("计算机专业");
+        computer.setTags(Arrays.asList("操作系统","计算机组成原理","计算机网络","数据结构","离散数学","C语言程序设计"));
+        tagDTOS.add(computer);
 
-        TagDTO framwork1 = new TagDTO();
-        framwork1.setCategoryName("土木工程");
-        framwork1.setTags(Arrays.asList("结构物理","高等数学","混凝土配置学","八段锦"));
-        tagDTOS.add(framwork1);
+        TagDTO Chinese = new TagDTO();
+        Chinese.setCategoryName("汉语言文学");
+        Chinese.setTags(Arrays.asList("中国古典文献学","文艺学","语言学及应用语言学","汉语言文字学","中国古代文学"));
+        tagDTOS.add(Chinese);
+
+        TagDTO financial = new TagDTO();
+        financial.setCategoryName("金融专业");
+        financial.setTags(Arrays.asList("考研数学三","金融学","公司财务","国际金融学"));
+        tagDTOS.add(financial);
+
+        TagDTO civilEngineering = new TagDTO();
+        civilEngineering.setCategoryName("土木工程");
+        civilEngineering.setTags(Arrays.asList("结构力学","工程力学","土木工程信息技术","材料力学"));
+        tagDTOS.add(civilEngineering);
+
+        TagDTO mathematics = new TagDTO();
+        mathematics.setCategoryName("数学专业");
+        mathematics.setTags(Arrays.asList("数学分析","高等代数","解析几何","实变函数与泛函分析","常微分方程"));
+        tagDTOS.add(mathematics);
+
+        TagDTO education = new TagDTO();
+        education.setCategoryName("教育专业");
+        education.setTags(Arrays.asList("教育学原理","教育研究方法","教育统计学","教育经济学"));
+        tagDTOS.add(education);
+
+        TagDTO kaoyan = new TagDTO();
+        kaoyan.setCategoryName("考研流程");
+        kaoyan.setTags(Arrays.asList("心得交流","考研流程"));
+        tagDTOS.add(kaoyan);
 
         return tagDTOS;
     }

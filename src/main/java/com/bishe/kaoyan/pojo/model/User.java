@@ -18,6 +18,7 @@ public class User {
     private Timestamp modifiedTime;
     @TableField(value = "head_sculpture")
     private String headSculpture;
+    private Integer type;
 
     public Integer getId() {
         return id;
@@ -73,5 +74,13 @@ public class User {
 
     public void setHeadSculpture(String headSculpture) {
         this.headSculpture = headSculpture;
+    }
+
+    public Integer getType() {
+        return type;
+    }
+
+    public void setType(Integer type) {
+        this.type = type;
     }
 }

@@ -1,8 +1,9 @@
 package com.bishe.kaoyan.utils;
 
 public enum NotificationTypeEnum {
-    REPLY_QUESTION(1, "回复了问题"),
-    REPLY_COMMENT(2, "回复了评论");
+    REPLY_QUESTION(1, "回复了文章"),
+    REPLY_COMMENT(2, "回复了评论"),
+    REPORT_QUESTION(3,"举报了文章");
 
     private int type;
     private String name;

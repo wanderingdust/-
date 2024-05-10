@@ -2,6 +2,7 @@ package com.bishe.kaoyan.pojo.model;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import com.baomidou.mybatisplus.annotation.Version;
 
 import java.sql.Timestamp;
@@ -25,6 +26,9 @@ public class Question {
     private Integer likeCount;
     @Version
     private Integer version;//锁的依据，仅支持 updateById(id) 与 update(entity, wrapper) 方法
+    @TableLogic
+    //逻辑删除字段 int mybatis-plus下,默认逻辑删除值为1 未逻辑删除 0
+    private Integer deleted;
 
     public Integer getId() {
         return id;
@@ -112,5 +116,13 @@ public class Question {
 
     public void setVersion(Integer version) {
         this.version = version;
+    }
+
+    public Integer getDeleted() {
+        return deleted;
+    }
+
+    public void setDeleted(Integer deleted) {
+        this.deleted = deleted;
     }
 }
